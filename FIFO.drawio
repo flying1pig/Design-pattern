@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-26T09:29:41.315Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="aJzy1Ls7He0CV_-ove50" version="14.7.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-27T03:27:43.667Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="eKhfqYQ2GiHjqF-Dl1uj" version="14.7.1" type="github">
   <diagram id="FNB3wmjtFQzVyso7ZeL9" name="第 1 页">
-    <mxGraphModel dx="946" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1773" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -26,22 +26,44 @@
         <mxCell id="Y3a-TxTfUl-AmMKUH8Wi-5" value="&lt;div&gt;Store&lt;/div&gt;&lt;div&gt;&lt;div&gt;Pop(PopProcessFunc) (interface{}, error)&lt;/div&gt;&lt;div&gt;AddIfNotPresent(interface{}) error&lt;/div&gt;&lt;div&gt;HasSynced() bool&lt;/div&gt;&lt;div&gt;Close()&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#ffffff;" vertex="1" parent="Y3a-TxTfUl-AmMKUH8Wi-4">
           <mxGeometry y="26" width="330" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Y3a-TxTfUl-AmMKUH8Wi-6" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+        <mxCell id="Y3a-TxTfUl-AmMKUH8Wi-6" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Y3a-TxTfUl-AmMKUH8Wi-8">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="235" y="496" as="sourcePoint" />
             <mxPoint x="235" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-5" y="480" />
+              <mxPoint x="235" y="480" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="Y3a-TxTfUl-AmMKUH8Wi-7" value="实现" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
           <mxGeometry x="240" y="450" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Y3a-TxTfUl-AmMKUH8Wi-8" value="FIFO" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="70" y="500" width="330" height="146" as="geometry">
+          <mxGeometry x="-170" y="520" width="330" height="146" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Y3a-TxTfUl-AmMKUH8Wi-9" value="&lt;div&gt;lock sync.RWMutex&lt;/div&gt;&lt;div&gt;cond sync.Cond&lt;/div&gt;&lt;div&gt;items map[string]interface{}&lt;/div&gt;&lt;div&gt;queue []string&lt;/div&gt;&lt;div&gt;populated bool&lt;/div&gt;&lt;div&gt;initialPopulationCount int&lt;/div&gt;&lt;div&gt;keyFunc KeyFunc&lt;/div&gt;&lt;div&gt;closed bool&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="Y3a-TxTfUl-AmMKUH8Wi-8">
           <mxGeometry y="26" width="330" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Y3a-TxTfUl-AmMKUH8Wi-10" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Y3a-TxTfUl-AmMKUH8Wi-11">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="410" y="540" as="sourcePoint" />
+            <mxPoint x="235" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="485" y="480" />
+              <mxPoint x="235" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y3a-TxTfUl-AmMKUH8Wi-11" value="DeltaFIFO" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="320" y="520" width="330" height="176" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y3a-TxTfUl-AmMKUH8Wi-12" value="&lt;div&gt;lock sync.RWMutex&lt;/div&gt;&lt;div&gt;cond sync.Cond&lt;/div&gt;&lt;div&gt;items map[string]Deltas&lt;/div&gt;&lt;div&gt;queue []string&lt;/div&gt;&lt;div&gt;populated bool&lt;/div&gt;&lt;div&gt;initialPopulationCount int&lt;/div&gt;&lt;div&gt;keyFunc KeyFunc&lt;/div&gt;&lt;div&gt;knownObjects KeyListerGetter&lt;/div&gt;&lt;div&gt;closed bool&lt;/div&gt;&lt;div&gt;emitDeltaTypeReplaced bool&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="Y3a-TxTfUl-AmMKUH8Wi-11">
+          <mxGeometry y="26" width="330" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
