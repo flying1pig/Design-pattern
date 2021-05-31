@@ -1,1 +1,46 @@
-<mxfile host="app.diagrams.net" modified="2021-05-31T06:56:27.500Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" version="14.7.1" etag="DALYLvfPvViQBmVzLPHx" type="github"><diagram id="NYttJiPehoRCqiLD4UlL">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-05-31T07:09:55.756Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="cy7TtGEA2m279QE5bND9" version="14.7.1" type="github">
+  <diagram id="NYttJiPehoRCqiLD4UlL" name="第 1 页">
+    <mxGraphModel dx="854" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jlLhG0sQ4v5VXFBN3Rch-1" value="sharedProcessor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="80" width="220" height="120" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jlLhG0sQ4v5VXFBN3Rch-2" value="&lt;div&gt;listenersStarted bool&lt;/div&gt;&lt;div&gt;listenersLock&amp;nbsp; &amp;nbsp; sync.RWMutex&lt;/div&gt;&lt;div&gt;listeners&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; []*processorListener&lt;/div&gt;&lt;div&gt;syncingListeners []*processorListener&lt;/div&gt;&lt;div&gt;clock&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; clock.Clock&lt;/div&gt;&lt;div&gt;wg&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;wait.Group&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#FFFFFF;" vertex="1" parent="jlLhG0sQ4v5VXFBN3Rch-1">
+          <mxGeometry y="26" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jlLhG0sQ4v5VXFBN3Rch-6" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="290" y="150" as="sourcePoint" />
+            <mxPoint x="380" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jlLhG0sQ4v5VXFBN3Rch-7" value="sharedProcessor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="70" width="220" height="156" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jlLhG0sQ4v5VXFBN3Rch-8" value="&lt;div&gt;nextCh chan interface{}&lt;/div&gt;&lt;div&gt;addCh&amp;nbsp; chan interface{}&lt;/div&gt;&lt;div&gt;handler ResourceEventHandler&lt;/div&gt;&lt;div&gt;pendingNotifications buffer.RingGrowing&lt;/div&gt;&lt;div&gt;requestedResyncPeriod time.Duration&lt;/div&gt;&lt;div&gt;resyncPeriod time.Duration&lt;/div&gt;&lt;div&gt;nextResync time.Time&lt;/div&gt;&lt;div&gt;resyncLock sync.Mutex&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#FFFFFF;" vertex="1" parent="jlLhG0sQ4v5VXFBN3Rch-7">
+          <mxGeometry y="26" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jlLhG0sQ4v5VXFBN3Rch-9" value="sharedProcessor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="106" width="220" height="84" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jlLhG0sQ4v5VXFBN3Rch-10" value="&lt;div&gt;OnAdd(obj interface{})&lt;/div&gt;&lt;div&gt;OnUpdate(oldObj, newObj interface{})&lt;/div&gt;&lt;div&gt;OnDelete(obj interface{})&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#FFFFFF;" vertex="1" parent="jlLhG0sQ4v5VXFBN3Rch-9">
+          <mxGeometry y="26" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="jlLhG0sQ4v5VXFBN3Rch-12" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="600" y="150" as="sourcePoint" />
+            <mxPoint x="690" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
